@@ -56,13 +56,9 @@
   <div id="leaflet-map"></div>
   <script>
 var map = L.map('leaflet-map').setView([36.1748, -115.1371], 13); 
-L.tileLayer('http://b.tile.stamen.com/terrain/{z}/{x}/{y}.png', {
-			maxZoom: 18,
-			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-				'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-				'Imagery © <a href="http://mapbox.com">Mapbox</a>',
-			id: 'mapbox.streets'
-		}).addTo(map);  
+L.tileLayer ('http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',{
+  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
+})  
     
 L.marker([36.1766, -115.1356]).bindPopup("Start Here").addTo(map);
    
